@@ -45,7 +45,7 @@ data2 = [{"Name": "Matt", "Age": 46, "City": "Las Vegas"}]
 with open("output.csv", mode="w", newline="") as file:
 
     fieldNames = ["Name", "Age", "City"]
-    csv_writer = csv.DictWriter(file, fieldnames=fieldNames)
+    csv_writer = csv.DictWriter(file, fieldnames=fieldNames) #create a writer which has the fieldnames mapped to the dictionary keys
 
     csv_writer.writeheader()  # writes the field names
     csv_writer.writerows(data2) # writes rows from dictionary
